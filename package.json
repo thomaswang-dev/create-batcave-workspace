@@ -1,6 +1,6 @@
 {
   "name": "create-batcave-workspace",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Scaffold a new Batcave workspace folder with a basic file and folder structure.",
   "repository": {
     "type": "git",
