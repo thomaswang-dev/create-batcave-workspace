@@ -1,0 +1,24 @@
+{
+  "name": "create-batcave-workspace",
+  "version": "0.0.1",
+  "description": "Scaffold a new Batcave workspace folder with a basic file and folder structure.",
+  "type": "module",
+  "bin": {
+    "create-batcave-workspace": "./index.js"
+  },
+  "files": [
+    "index.js",
+    "template"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "create",
+    "scaffold",
+    "starter",
+    "template",
+    "workspace"
+  ],
+  "license": "MIT"
+}
