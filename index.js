@@ -16,9 +16,14 @@ if (fs.existsSync(targetDir) && fs.readdirSync(targetDir).length > 0) {
 
 fs.cpSync(templateDir, targetDir, { recursive: true })
 
-// npm strips .gitignore from published packages, so the template ships it
-// as "gitignore" and we restore the dot here.
-fs.renameSync(path.join(targetDir, 'gitignore'), path.join(targetDir, '.gitignore'))
+// npm never ships files named ".gitignore" and even applies their rules
+// while packing (which would exclude repos/ from the tarball), so the
+// template carries it as "gitignore" (no dot) and we restore the dot here.
+// Guarded so a packing mishap degrades gracefully instead of crashing.
+const gitignoreSrc = path.join(targetDir, 'gitignore')
+if (fs.existsSync(gitignoreSrc)) {
+  fs.renameSync(gitignoreSrc, path.join(targetDir, '.gitignore'))
+}
 
 try {
   try {
