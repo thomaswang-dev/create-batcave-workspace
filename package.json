@@ -2,6 +2,10 @@
   "name": "create-batcave-workspace",
   "version": "0.0.1",
   "description": "Scaffold a new Batcave workspace folder with a basic file and folder structure.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thomaswang-dev/create-batcave-workspace.git"
+  },
   "type": "module",
   "bin": {
     "create-batcave-workspace": "./index.js"
