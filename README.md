@@ -15,12 +15,23 @@ Creates `my-workspace/` (default name: `batcave-workspace/`) containing:
 ```
 ├── README.md
 ├── .gitignore
-├── repos/         # gitignored — for cloned repositories
+├── .batcave.json      # workspace marker + version stamp
+├── repos/             # gitignored — for cloned repositories
 ├── plans/
 └── researches/
 ```
 
 Then runs `git init` and makes an initial commit, so the folder is a fresh repo ready to push.
+
+## Skills
+
+Skills are distributed separately via
+[`batcave-skills`](https://www.npmjs.com/package/batcave-skills):
+
+```bash
+npx batcave-skills install           # into the current workspace
+npx batcave-skills install --global  # for all your projects
+```
 
 ## Releasing
 
