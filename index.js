@@ -40,7 +40,8 @@ function restoreGitignore(dir) {
 
 // Marker that this folder is a Batcave workspace; checked by batcave-skills.
 function stampVersion(dir) {
-  fs.writeFileSync(path.join(dir, '.batcave.json'), JSON.stringify({ version }, null, 2) + '\n')
+  const config = { version, skills: { autoMerge: false } }
+  fs.writeFileSync(path.join(dir, '.batcave.json'), JSON.stringify(config, null, 2) + '\n')
 }
 
 function initGit(dir) {

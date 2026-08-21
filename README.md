@@ -15,7 +15,7 @@ Creates `my-workspace/` (default name: `batcave-workspace/`) containing:
 ```
 ├── README.md
 ├── .gitignore
-├── .batcave.json      # workspace marker + version stamp
+├── .batcave.json      # workspace marker + version stamp + skills config (auto-merge off by default)
 ├── repos/             # gitignored — for cloned repositories
 ├── plans/
 └── researches/
